@@ -1,0 +1,11 @@
+Added colors, spacing and typography to CSS as variables and text-preset classes, based on design file.
+
+Grouped HTML into functional groups: header/main; main divided into hgroups
+
+Added img tags to link to svg images provided. I don't see the need to include the svg inline in the HTML because the icons are pre-colored and won't need to have their colors changed via CSS.
+
+To add images in the bottom-right corner instead of bottom-left corner of each card: I needed an approach that didn't take the icon out of the flow. For that reason, I ruled out absolute positioning and float:right. I wrapped the images in their own divs and set the divs to display:flex; justify-content:flex-end.
+
+Adjusted intra-card spacing using top and bottom margins on h2, p and img wrapper elements.
+
+I want to use text-preset classes. At the same time, I don't want to rely on adding text-preset classes in the HTML - I want all the CSS rules to explicitly arise from the CSS file(s). To strike that balance, I'd like to look into using SASS or SCSS, which would allow me to @extend rules for text elements to include text-preset rules.
