@@ -9,3 +9,7 @@ To add images in the bottom-right corner instead of bottom-left corner of each c
 Adjusted intra-card spacing using top and bottom margins on h2, p and img wrapper elements.
 
 I want to use text-preset classes. At the same time, I don't want to rely on adding text-preset classes in the HTML - I want all the CSS rules to explicitly arise from the CSS file(s). To strike that balance, I'd like to look into using SASS or SCSS, which would allow me to @extend rules for text elements to include text-preset rules.
+	(pushed to github before starting the switch)
+
+https://dev.to/ak_ram/how-to-add-sass-to-your-project--32cn
+https://sass-lang.com/guide/

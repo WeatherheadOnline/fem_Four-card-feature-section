@@ -7,6 +7,7 @@ $grey-400: #697077
 $grey-980: #FAFAFA
 $white: #ffffff
 $spacing-500-40: 4rem
+$spacing-450-36: 3.6rem
 $spacing-400-32: 3.2rem
 $spacing-300-24: 2.4rem
 $spacing-200-16: 1.6rem
@@ -14,29 +15,39 @@ $spacing-100-8: 0.8rem
 
 %text-preset-1 
     font-weight: 600
-    font-size: min(6.3vw, 3.6rem)
     line-height: 140%
     letter-spacing: 0.25px
+    font-size: 6.3vw
+    @media (hover: hover)
+        font-size: 3.6rem
 %text-preset-2 
     font-weight: 200
-    font-size: min(6.3vw, 3.6rem)
     line-height: 140%
     letter-spacing: 0
+    font-size: 6.3vw
+    @media (hover: hover)
+        font-size: 3.6rem
 %text-preset-3 
     font-weight: 600
-    font-size: 2rem
     line-height: 135%
     letter-spacing: 0
+    font-size: 5.5vw
+    @media (hover: hover)
+        font-size: 2rem
 %text-preset-4 
     font-weight: 400
-    font-size: 1.5rem
     line-height: 140%
     letter-spacing: 0
+    font-size: 4vw
+    @media (hover: hover)
+        font-size: 1.5rem
 %text-preset-5 
     font-weight: 400
-    font-size: 1.3rem
     line-height: 160%
     letter-spacing: 0
+    font-size: 3.8vw
+    @media (hover: hover)
+        font-size: 1.3rem
 
 @mixin hgroup-top-border($color: $grey-400)
     border-top: 4px solid $color
@@ -67,12 +78,11 @@ header p
     @extend %text-preset-4
 
 hgroup 
-    @extend %text-preset-5
     width: calc(100% - 2 * $spacing-300-24)
     background-color: $white
     border-radius: 5px
     box-shadow: 0 10px 20px -15px $grey-400
-    margin: $spacing-300-24 auto
+    margin: $spacing-450-36 auto
     padding: $spacing-400-32
     position: relative
 
@@ -90,6 +100,7 @@ hgroup h2
     margin: 0
 
 hgroup p 
+    @extend %text-preset-5
     margin: $spacing-100-8 0 0 0
 
 hgroup img 
@@ -100,6 +111,7 @@ hgroup .icon-wrapper
     display: flex
     justify-content: flex-end
     margin-top: $spacing-400-32
+    margin-bottom: $spacing-100-8
 
 .attribution  
     font-size: 11px 
