@@ -16,8 +16,6 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -28,20 +26,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![https://github.com/WeatherheadOnline/fem_Four-card-feature-section/blob/main/project_screenshot_tablet.png](https://github.com/WeatherheadOnline/fem_Four-card-feature-section/blob/main/project_screenshot_tablet.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://weatherheadonline.github.io/fem_Four-card-feature-section/](https://weatherheadonline.github.io/fem_Four-card-feature-section/)
 
 ## My process
 
@@ -50,61 +39,28 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [SASS](https://sass-lang.com/) - Stylistically Awesome StyleSheets
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This is the first time I've used SASS. I learned a lot, including general syntax, variables, @mixin, @extend, when to use @mixin vs @extend, and media queries.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I was also reminded that it's best to envision the architecture of the entire page before settling on an approach and starting implementation. I tried to shoehorn flexbox in to the project halfway through, and the project would have gone faster and more smoothly if I had planned for flexbox from the beginning.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I'm feeling comfortable with basic SASS after this project. However, I'd like to get more practice, and learn more about what I can do with it.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [SASS documentation](https://sass-lang.com/guide/) - This was a clear and easy-to-read source of information that I found very helpful while getting started with using SASS.
+- ["How to add SASS to your project"](https://dev.to/ak_ram/how-to-add-sass-to-your-project--32cn) - This blog post helped me understand where SASS fits in, in a mechanical sense: what exactly it does, how I should use it, and where it fits in to the workflow.
+- [How to use a sass variable in nth child class](https://www.geeksforgeeks.org/how-to-use-a-sass-variable-in-nth-child-class/) - I had originally planned to use `nth-child` to specify colors for each card's border. This article provided a clear explanation, with examples, of more advanced nth-child selectors and how to implement them in a SASS context.
+- [CSS At-Rules](https://sass-lang.com/documentation/at-rules/css/) - This SASS-specific article showed me how to use the media query at-rule in a SASS context.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [www.weatherheadonline.com](www.WeatherheadOnline.com)
+- Frontend Mentor - [@WeatherheadOnline](https://www.frontendmentor.io/profile/WeatherheadOnline)
+- LinkedIn - [@eddieweatherhead](https://www.linkedin.com/in/eddieweatherhead/)
