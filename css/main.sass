@@ -6,47 +6,50 @@ $grey-500: #4c4e61
 $grey-400: #697077
 $grey-980: #FAFAFA
 $white: #ffffff
+
 $spacing-500-40: 4rem
-$spacing-450-36: 3.6rem
 $spacing-400-32: 3.2rem
 $spacing-300-24: 2.4rem
 $spacing-200-16: 1.6rem
 $spacing-100-8: 0.8rem
+
+$breakpoint-tablet: 700px
+$breakpoint-desktop: 1150px
 
 %text-preset-1 
     font-weight: 600
     line-height: 140%
     letter-spacing: 0.25px
     font-size: 6.3vw
-    @media (hover: hover)
+    @media (hover: hover), (min-width: $breakpoint-tablet)
         font-size: 3.6rem
 %text-preset-2 
     font-weight: 200
     line-height: 140%
     letter-spacing: 0
     font-size: 6.3vw
-    @media (hover: hover)
+    @media (hover: hover), (min-width: $breakpoint-tablet)
         font-size: 3.6rem
 %text-preset-3 
     font-weight: 600
     line-height: 135%
     letter-spacing: 0
     font-size: 5.5vw
-    @media (hover: hover)
+    @media (hover: hover), (min-width: $breakpoint-tablet)
         font-size: 2rem
 %text-preset-4 
     font-weight: 400
     line-height: 140%
     letter-spacing: 0
     font-size: 4vw
-    @media (hover: hover)
+    @media (hover: hover), (min-width: $breakpoint-tablet)
         font-size: 1.5rem
 %text-preset-5 
     font-weight: 400
     line-height: 160%
     letter-spacing: 0
     font-size: 3.8vw
-    @media (hover: hover)
+    @media (hover: hover), (min-width: $breakpoint-tablet)
         font-size: 1.3rem
 
 @mixin hgroup-top-border($color: $grey-400)
@@ -64,35 +67,64 @@ body
 
 header 
     text-align: center
+    margin: $spacing-400-32 0
     padding: $spacing-300-24
 
 h1
     @extend %text-preset-2
+    margin-bottom: $spacing-200-16
 
-// This line isn't rendering:
 h1 span 
     display: block
     @extend %text-preset-1
 
 header p 
     @extend %text-preset-4
+    max-width: 55rem
+    margin: 0 auto
+
+main
+    display: flex
+    flex-direction: column
+    gap: $spacing-400-32
+    justify-content: center
+    align-items: center
+    @media (hover: hover) and (min-width: $breakpoint-desktop)
+        width: min-content
+        margin: 0 auto
+        flex-direction: row
+
+.two-card-wrapper   
+    display: flex
+    flex-direction: column
+    gap: $spacing-400-32
+    justify-content: center
+    align-items: center
+    @media (hover: none) and (min-width: $breakpoint-tablet), (hover: hover) and (min-width: 770px) and (max-width: $breakpoint-desktop)
+        flex-direction: row
 
 hgroup 
     width: calc(100% - 2 * $spacing-300-24)
     background-color: $white
     border-radius: 5px
-    box-shadow: 0 10px 20px -15px $grey-400
-    margin: $spacing-450-36 auto
+    box-shadow: 0 15px 30px -11px #83A6D288
+    margin: 0 auto
     padding: $spacing-400-32
     position: relative
+    @media (hover: none) and (min-width: $breakpoint-tablet)
+        width: 31.5rem
+        height: max-content
+    @media (hover: hover) 
+        width: 35rem
+        height: max-content
 
-hgroup:nth-child(4n+1)
+.border-cyan
     @include hgroup-top-border($cyan)
-hgroup:nth-child(4n+2)
+.border-red
     @include hgroup-top-border($red)
-hgroup:nth-child(4n+3)
+.border-orange
     @include hgroup-top-border($orange)
-hgroup:nth-child(4n)
+.border-blue
     @include hgroup-top-border($blue)
 
 hgroup h2 
@@ -103,18 +135,19 @@ hgroup p
     @extend %text-preset-5
     margin: $spacing-100-8 0 0 0
 
-hgroup img 
-    height: 25%
-    width: auto
-
 hgroup .icon-wrapper 
     display: flex
     justify-content: flex-end
     margin-top: $spacing-400-32
     margin-bottom: $spacing-100-8
 
+hgroup img 
+    height: 25%
+    width: auto
+
 .attribution  
     font-size: 11px 
     text-align: center
+    padding: $spacing-500-40 0 $spacing-200-16 0
 .attribution a  
-    color: hsl(228, 45%, 44%)
+    color: $blue

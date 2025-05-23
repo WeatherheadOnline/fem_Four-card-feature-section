@@ -4,7 +4,7 @@ h1 span {
   letter-spacing: 0.25px;
   font-size: 6.3vw;
 }
-@media (hover: hover) {
+@media (hover: hover), (min-width: 700px) {
   h1 span {
     font-size: 3.6rem;
   }
@@ -16,7 +16,7 @@ h1 {
   letter-spacing: 0;
   font-size: 6.3vw;
 }
-@media (hover: hover) {
+@media (hover: hover), (min-width: 700px) {
   h1 {
     font-size: 3.6rem;
   }
@@ -28,7 +28,7 @@ hgroup h2 {
   letter-spacing: 0;
   font-size: 5.5vw;
 }
-@media (hover: hover) {
+@media (hover: hover), (min-width: 700px) {
   hgroup h2 {
     font-size: 2rem;
   }
@@ -40,7 +40,7 @@ header p {
   letter-spacing: 0;
   font-size: 4vw;
 }
-@media (hover: hover) {
+@media (hover: hover), (min-width: 700px) {
   header p {
     font-size: 1.5rem;
   }
@@ -52,7 +52,7 @@ hgroup p {
   letter-spacing: 0;
   font-size: 3.8vw;
 }
-@media (hover: hover) {
+@media (hover: hover), (min-width: 700px) {
   hgroup p {
     font-size: 1.3rem;
   }
@@ -73,36 +73,86 @@ body {
 
 header {
   text-align: center;
+  margin: 3.2rem 0;
   padding: 2.4rem;
+}
+
+h1 {
+  margin-bottom: 1.6rem;
 }
 
 h1 span {
   display: block;
 }
 
+header p {
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  justify-content: center;
+  align-items: center;
+}
+@media (hover: hover) and (min-width: 1150px) {
+  main {
+    width: min-content;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+}
+
+.two-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  justify-content: center;
+  align-items: center;
+}
+@media (hover: none) and (min-width: 700px), (hover: hover) and (min-width: 770px) and (max-width: 1150px) {
+  .two-card-wrapper {
+    flex-direction: row;
+  }
+}
+
 hgroup {
   width: calc(100% - 4.8rem);
   background-color: #ffffff;
   border-radius: 5px;
-  box-shadow: 0 10px 20px -15px #697077;
-  margin: 3.6rem auto;
+  box-shadow: 0 15px 30px -11px rgba(131, 166, 210, 0.5333333333);
+  margin: 0 auto;
   padding: 3.2rem;
   position: relative;
 }
+@media (hover: none) and (min-width: 700px) {
+  hgroup {
+    width: 31.5rem;
+    height: max-content;
+  }
+}
+@media (hover: hover) {
+  hgroup {
+    width: 35rem;
+    height: max-content;
+  }
+}
 
-hgroup:nth-child(4n+1) {
+.border-cyan {
   border-top: 4px solid #45d3d3;
 }
 
-hgroup:nth-child(4n+2) {
+.border-red {
   border-top: 4px solid #ea5353;
 }
 
-hgroup:nth-child(4n+3) {
+.border-orange {
   border-top: 4px solid #fcaf4a;
 }
 
-hgroup:nth-child(4n) {
+.border-blue {
   border-top: 4px solid #549ef2;
 }
 
@@ -114,11 +164,6 @@ hgroup p {
   margin: 0.8rem 0 0 0;
 }
 
-hgroup img {
-  height: 25%;
-  width: auto;
-}
-
 hgroup .icon-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -126,13 +171,19 @@ hgroup .icon-wrapper {
   margin-bottom: 0.8rem;
 }
 
+hgroup img {
+  height: 25%;
+  width: auto;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding: 4rem 0 1.6rem 0;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: #549ef2;
 }
 
 /*# sourceMappingURL=main.css.map */
