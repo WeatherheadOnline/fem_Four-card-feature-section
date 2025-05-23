@@ -1,0 +1,108 @@
+$cyan: #45d3d3
+$red: #ea5353
+$orange: #fcaf4a
+$blue: #549ef2
+$grey-500: #4c4e61
+$grey-400: #697077
+$grey-980: #FAFAFA
+$white: #ffffff
+$spacing-500-40: 4rem
+$spacing-400-32: 3.2rem
+$spacing-300-24: 2.4rem
+$spacing-200-16: 1.6rem
+$spacing-100-8: 0.8rem
+
+%text-preset-1 
+    font-weight: 600
+    font-size: min(6.3vw, 3.6rem)
+    line-height: 140%
+    letter-spacing: 0.25px
+%text-preset-2 
+    font-weight: 200
+    font-size: min(6.3vw, 3.6rem)
+    line-height: 140%
+    letter-spacing: 0
+%text-preset-3 
+    font-weight: 600
+    font-size: 2rem
+    line-height: 135%
+    letter-spacing: 0
+%text-preset-4 
+    font-weight: 400
+    font-size: 1.5rem
+    line-height: 140%
+    letter-spacing: 0
+%text-preset-5 
+    font-weight: 400
+    font-size: 1.3rem
+    line-height: 160%
+    letter-spacing: 0
+
+@mixin hgroup-top-border($color: $grey-400)
+    border-top: 4px solid $color
+
+*
+    box-sizing: border-box
+
+html 
+    font-size: 10px
+
+body 
+    font-family: Poppins, serif
+    background-color: $grey-980
+
+header 
+    text-align: center
+    padding: $spacing-300-24
+
+h1
+    @extend %text-preset-2
+
+// This line isn't rendering:
+h1 span 
+    display: block
+    @extend %text-preset-1
+
+header p 
+    @extend %text-preset-4
+
+hgroup 
+    @extend %text-preset-5
+    width: calc(100% - 2 * $spacing-300-24)
+    background-color: $white
+    border-radius: 5px
+    box-shadow: 0 10px 20px -15px $grey-400
+    margin: $spacing-300-24 auto
+    padding: $spacing-400-32
+    position: relative
+
+hgroup:nth-child(4n+1)
+    @include hgroup-top-border($cyan)
+hgroup:nth-child(4n+2)
+    @include hgroup-top-border($red)
+hgroup:nth-child(4n+3)
+    @include hgroup-top-border($orange)
+hgroup:nth-child(4n)
+    @include hgroup-top-border($blue)
+
+hgroup h2 
+    @extend %text-preset-3
+    margin: 0
+
+hgroup p 
+    margin: $spacing-100-8 0 0 0
+
+hgroup img 
+    height: 25%
+    width: auto
+
+hgroup .icon-wrapper 
+    display: flex
+    justify-content: flex-end
+    margin-top: $spacing-400-32
+
+.attribution  
+    font-size: 11px 
+    text-align: center
+.attribution a  
+    color: hsl(228, 45%, 44%)
