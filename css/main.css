@@ -65,11 +65,11 @@ hgroup p {
 
 html {
   font-size: 10px;
+  background-color: #FAFAFA;
 }
 
 body {
   font-family: Poppins, serif;
-  background-color: #FAFAFA;
 }
 
 header {
